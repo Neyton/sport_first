@@ -1,0 +1,67 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @Neyton
+ Unwatch 1
+  Star 0
+  Fork 0 Neyton/sport_pro
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
+Branch: master Find file Copy pathsport_pro/.gitignore
+568b554  on 31 Aug
+@Neyton Neyton first commit
+1 contributor
+RawBlameHistory
+39 lines (32 sloc)  696 Bytes
+# Please keep in mind:
+# - If you need to ignore files on your local machine only, please use .git/info/exclude instead .gitignore
+# - Project specified ignore rules must be located in project directory only
+
+# Eclipse project files
+.settings
+.classpath
+.project
+.metadata
+
+# IntelliJ Idea project files
+.idea
+*.iml
+*.ipr
+*.iws
+
+# Netbeans project files
+nbproject
+
+# Always ignore these directories/files
+target
+logs
+antarcticle-view/antarcticle-web-view/overlays
+
+# Maven release plugin files
+release.properties
+pom.xml.releaseBackup
+
+# Android files
+gen
+build.xml
+local.properties
+proguard-project.txt
+project.properties
+ant.properties
+/src/main/resources/application.properties
+/src/main/resources/hibernate.cfg.xml
+/.idea/
+/.mvn/
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
+.idea/
+.mvn/
+mvnw
+mvnw.cmd
+sport_first.iml
+target/
+
+
+
