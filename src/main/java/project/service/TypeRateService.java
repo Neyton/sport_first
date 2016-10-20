@@ -1,12 +1,12 @@
 package project.service;
 
 
-import project.entity.TypeRate;
+import project.entity.TypeRateEntity;
 
 public interface TypeRateService {
 
-    void addType(TypeRate typeRate);
-    void deleteType(TypeRate typeRate);
-    TypeRate getTypeById(int id);
-    TypeRate editType(TypeRate typeRate);
+    void addType(TypeRateEntity typeRate);
+    void deleteType(TypeRateEntity typeRate);
+    TypeRateEntity getTypeById(int id);
+    TypeRateEntity editType(TypeRateEntity typeRate);
 }

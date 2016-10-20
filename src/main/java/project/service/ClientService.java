@@ -1,14 +1,14 @@
 package project.service;
 
-import project.entity.Client;
+import project.entity.ClientsEntity;
 
 import java.util.List;
 
 public interface ClientService {
 
-    Client addClient(Client client);
+    ClientsEntity addClient(ClientsEntity client);
     void deleteClient(int id);
-    Client getById(int id);
-    Client editClient(Client client);
-    List<Client> getAll();
+    ClientsEntity getById(int id);
+    ClientsEntity editClient(ClientsEntity client);
+    List<ClientsEntity> getAll();
 }

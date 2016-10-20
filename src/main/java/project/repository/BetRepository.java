@@ -1,8 +1,9 @@
 package project.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import project.entity.Bet;
+import org.springframework.stereotype.Repository;
+import project.entity.BetsEntity;
 
-
-public interface BetRepository extends JpaRepository<Bet, Integer> {
+@Repository
+public interface BetRepository extends JpaRepository<BetsEntity, Integer> {
 }

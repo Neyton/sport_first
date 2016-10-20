@@ -4,7 +4,7 @@ package project.service.Impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import project.entity.Client;
+import project.entity.ClientsEntity;
 import project.repository.ClientRepository;
 import project.service.ClientService;
 
@@ -19,7 +19,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     @Transactional()
-    public Client addClient(Client client) {
+    public ClientsEntity addClient(ClientsEntity client) {
         return clientRepository.saveAndFlush(client);
     }
 
@@ -29,17 +29,17 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public Client getById(int id) {
+    public ClientsEntity getById(int id) {
         return clientRepository.findOne(id);
     }
 
     @Override
-    public Client editClient(Client client) {
+    public ClientsEntity editClient(ClientsEntity client) {
         return clientRepository.saveAndFlush(client);
     }
 
     @Override
-    public List<Client> getAll() {
+    public List<ClientsEntity> getAll() {
         return clientRepository.findAll();
     }
 }

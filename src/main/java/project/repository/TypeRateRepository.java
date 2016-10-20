@@ -1,8 +1,9 @@
 package project.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import project.entity.TypeRate;
+import org.springframework.stereotype.Repository;
+import project.entity.TypeRateEntity;
 
-
-public interface TypeRateRepository extends JpaRepository<TypeRate, Integer> {
+@Repository
+public interface TypeRateRepository extends JpaRepository<TypeRateEntity, Integer> {
 }

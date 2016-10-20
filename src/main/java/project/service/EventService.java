@@ -1,14 +1,14 @@
 package project.service;
 
 
-import project.entity.Event;
+import project.entity.EventsEntity;
 
 import java.util.List;
 
 public interface EventService  {
 
-    void addEvent(Event event);
-    void deleteEvent(Event event);
-    Event getEventById(int id);
-    List<Event> getAll();
+    void addEvent(EventsEntity event);
+    void deleteEvent(EventsEntity event);
+    EventsEntity getEventById(int id);
+    List<EventsEntity> getAll();
 }
