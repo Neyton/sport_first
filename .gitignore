@@ -14,7 +14,7 @@
 nbproject
 
 # Always ignore these directories/files
-target
+back/target
 logs
 antarcticle-view/antarcticle-web-view/overlays
 
@@ -49,3 +49,46 @@ ant.properties
 /mvnw.cmd
 /mvnw
 /sport_first.iml
+
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/front/dist
+/front/tmp
+
+# dependencies
+/front/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# misc
+/front/.sass-cache
+/front/connect.lock
+/front/coverage/*
+/front/libpeerconnection.log
+/front/npm-debug.log
+/front/testem.log
+/front/typings
+
+# e2e
+/front/e2e/*.js
+/front/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db

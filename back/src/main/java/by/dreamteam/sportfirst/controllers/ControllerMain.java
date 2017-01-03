@@ -49,11 +49,8 @@ public class ControllerMain {
 
     @RequestMapping("/admin")
     public String admin() {
-
         return "admin";
     }
-
-
 }
 
 
