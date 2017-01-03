@@ -50,18 +50,18 @@ local.properties
 proguard-project.txt
 project.properties
 ant.properties
-/src/main/resources/application.properties
-/src/main/resources/hibernate.cfg.xml
-/.idea/
-/.mvn/
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
-.idea/
-.mvn/
-mvnw
-mvnw.cmd
-sport_first.iml
-target/
+#/src/main/resources/application.properties
+#/src/main/resources/hibernate.cfg.xml
+#/.idea/
+#/.mvn/
+#Contact GitHub API Training Shop Blog About
+#© 2016 GitHub, Inc. Terms Privacy Security Status Help
+#.idea/
+#.mvn/
+#mvnw
+#mvnw.cmd
+#sport_first.iml
+#target/
 
 
 

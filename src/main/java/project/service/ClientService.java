@@ -11,4 +11,5 @@ public interface ClientService {
     ClientsEntity getById(int id);
     ClientsEntity editClient(ClientsEntity client);
     List<ClientsEntity> getAll();
+    ClientsEntity getClientByName(String login);
 }

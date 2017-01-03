@@ -1,7 +1,9 @@
 package project.controllers;
 
 
+import org.omg.IOP.ServiceContextHolder;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -40,6 +42,22 @@ public class ControllerMain {
         model.setViewName("index");
         return model;
     }
+
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @RequestMapping("/user")
+    public String user() { return "user";}
+
+    @RequestMapping("/admin")
+    public String admin() {
+
+        return "admin";
+    }
+
+
 
 }
 

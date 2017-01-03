@@ -42,4 +42,12 @@ public class ClientServiceImpl implements ClientService {
     public List<ClientsEntity> getAll() {
         return clientRepository.findAll();
     }
+
+    @Override
+    public ClientsEntity getClientByName(String login) {
+        ClientsEntity client = new ClientsEntity();
+        client.setLogin("user");
+        client.setPassword("user");
+        return client;
+    }
 }

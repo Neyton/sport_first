@@ -13,6 +13,7 @@ public class ClientsEntity {
     private String email;
     private Integer money;
     private Set<BetsEntity> bets;
+    private Set<RolesEntity> roles;
 
     public ClientsEntity(int id, String login, String password, String email, Integer money, Set<BetsEntity> bets) {
         this.id = id;
@@ -84,6 +85,17 @@ public class ClientsEntity {
 
     public void setBets(Set<BetsEntity> bets) {
         this.bets = bets;
+    }
+
+    @ManyToMany
+    @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"),
+        inverseJoinColumns = @JoinColumn(name = "role_id"))
+    public Set<RolesEntity> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<RolesEntity> roles) {
+        this.roles = roles;
     }
 
     @Override
