@@ -7,12 +7,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = "project.repository")
-@EntityScan(basePackages = "project/entity")
-@ComponentScan(value = "project")
-public class SportFirstApplication  {
+@EnableJpaRepositories(basePackages = "by.dreamteam.sportfirst.repository")
+@EntityScan(basePackages = "by.dreamteam.sportfirst.entity")
+@ComponentScan("by.dreamteam.sportfirst")
+public class SportFirstApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SportFirstApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(SportFirstApplication.class, args);
+    }
 }

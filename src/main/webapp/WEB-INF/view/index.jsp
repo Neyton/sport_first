@@ -1,5 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%--<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -34,14 +34,14 @@
 			    <li><a href="#">Rules</a></li>
 			    <li><a href="#">Contacts</a></li>
 			    <li><a href="login">Login</a></li>
-                <sec:authorize access="isAuthenticated()">
-                    <li><sec:authentication property="principal.username"/></li>
-                    <li><a href="/logout">Logout</a></li>
-                </sec:authorize>
-                <sec:authorize access="!isAuthenticated()">
-                    <li>                </li>
-                    <li>                </li>
-                </sec:authorize>
+                <%--<sec:authorize access="isAuthenticated()">--%>
+                    <%--<li><sec:authentication property="principal.username"/></li>--%>
+                    <%--<li><a href="/logout">Logout</a></li>--%>
+                <%--</sec:authorize>--%>
+                <%--<sec:authorize access="!isAuthenticated()">--%>
+                    <%--<li>                </li>--%>
+                    <%--<li>                </li>--%>
+                <%--</sec:authorize>--%>
 			</ul>
 		</div>
 	</div>
