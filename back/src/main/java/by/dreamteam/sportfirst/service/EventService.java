@@ -1,14 +1,14 @@
 package by.dreamteam.sportfirst.service;
 
 
-import by.dreamteam.sportfirst.entity.EventsEntity;
+import by.dreamteam.sportfirst.entity.EventEntity;
 
 import java.util.List;
 
 public interface EventService  {
 
-    void addEvent(EventsEntity event);
-    void deleteEvent(EventsEntity event);
-    EventsEntity getEventById(int id);
-    List<EventsEntity> getAll();
+    void addEvent(EventEntity event);
+    void deleteEvent(EventEntity event);
+    EventEntity getEventById(int id);
+    List<EventEntity> getAll();
 }

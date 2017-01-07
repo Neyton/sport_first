@@ -1,6 +1,6 @@
 package by.dreamteam.sportfirst.service.Impl;
 
-import by.dreamteam.sportfirst.entity.Liga;
+import by.dreamteam.sportfirst.entity.TournamentEntity;
 import by.dreamteam.sportfirst.repository.LigaRepository;
 import by.dreamteam.sportfirst.service.LigaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class LigaServiceImpl implements LigaService {
     LigaRepository ligaRepository;
 
     @Override
-    public List<Liga> getAll() {
+    public List<TournamentEntity> getAll() {
         return ligaRepository.findAll();
     }
 }

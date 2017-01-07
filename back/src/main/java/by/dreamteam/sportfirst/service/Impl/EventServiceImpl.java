@@ -1,6 +1,6 @@
 package by.dreamteam.sportfirst.service.Impl;
 
-import by.dreamteam.sportfirst.entity.EventsEntity;
+import by.dreamteam.sportfirst.entity.EventEntity;
 import by.dreamteam.sportfirst.repository.EventRepository;
 import by.dreamteam.sportfirst.service.EventService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,22 +21,22 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public void addEvent(EventsEntity event) {
+    public void addEvent(EventEntity event) {
         eventRepository.saveAndFlush(event);
     }
 
     @Override
-    public void deleteEvent(EventsEntity event) {
+    public void deleteEvent(EventEntity event) {
         eventRepository.delete(event);
     }
 
     @Override
-    public EventsEntity getEventById(int id) {
+    public EventEntity getEventById(int id) {
         return eventRepository.findOne(id);
     }
 
     @Override
-    public List<EventsEntity> getAll() {
+    public List<EventEntity> getAll() {
         return eventRepository.findAll();
     }
 }

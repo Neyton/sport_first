@@ -1,0 +1,53 @@
+[33mcommit f83dcd8a9f40227fa9e48d2e6b82c7f187084ea8[m
+Author: Neyton <melgraf33@gmail.com>
+Date:   Wed Jan 4 18:19:32 2017 +0300
+
+    dto + RestController
+
+[33mcommit 5f02063978c3f22bb0889b139d5d2f2798c7b762[m
+Author: Neyton <melgraf33@gmail.com>
+Date:   Wed Jan 4 00:34:26 2017 +0300
+
+    delete old controller
+
+[33mcommit d645afb418ee2a9b199c0701f254750f1f205734[m
+Author: Andrei Karabach <a.karabach@sam-solutions.com>
+Date:   Tue Jan 3 23:41:08 2017 +0300
+
+    init front; move spring-boot project to back
+
+[33mcommit e29506d20ca6576fca2090d01f987384b149ee98[m
+Author: ankar <a.karabach@sam-solutions.com>
+Date:   Tue Jan 3 22:01:09 2017 +0300
+
+    fix project
+
+[33mcommit 05cc87295cf36661c31898f102f8032d44628366[m
+Author: ankar <a.karabach@sam-solutions.com>
+Date:   Tue Jan 3 21:09:54 2017 +0300
+
+    fix project
+
+[33mcommit e903b288dae7d64b112c95056192e27cee1709fe[m
+Author: Neyton <melgraf33@gmail.com>
+Date:   Tue Jan 3 20:14:32 2017 +0300
+
+    only one
+
+[33mcommit d30644cc4faa0b938712fe49f081a5938be7b310[m
+Author: Neyton <melgraf33@gmail.com>
+Date:   Fri Oct 21 02:17:31 2016 +0300
+
+    add web
+
+[33mcommit 518b607a3a873e7207aa96bec65f16edc7a71d71[m
+Author: Neyton <melgraf33@gmail.com>
+Date:   Fri Oct 21 01:33:20 2016 +0300
+
+    create index.jsp,  controller
+
+[33mcommit 7f59e63d7c7d06ea28724a200aa48b3ddd722d7d[m
+Author: Neyton <melgraf33@gmail.com>
+Date:   Fri Oct 7 23:50:40 2016 +0300
+
+    first commit

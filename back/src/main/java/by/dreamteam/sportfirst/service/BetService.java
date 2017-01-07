@@ -1,11 +1,11 @@
 package by.dreamteam.sportfirst.service;
 
 
-import by.dreamteam.sportfirst.entity.BetsEntity;
+import by.dreamteam.sportfirst.entity.BetEntity;
 
 public interface BetService {
 
-    void addBet(BetsEntity bet);
-    BetsEntity getBetById(int id);
+    void addBet(BetEntity bet);
+    BetEntity getBetById(int id);
 
 }

@@ -1,15 +1,15 @@
 package by.dreamteam.sportfirst.service;
 
-import by.dreamteam.sportfirst.entity.ClientsEntity;
+import by.dreamteam.sportfirst.entity.ClientEntity;
 
 import java.util.List;
 
 public interface ClientService {
 
-    ClientsEntity addClient(ClientsEntity client);
+    ClientEntity addClient(ClientEntity client);
     void deleteClient(int id);
-    ClientsEntity getById(int id);
-    ClientsEntity editClient(ClientsEntity client);
-    List<ClientsEntity> getAll();
-    ClientsEntity getClientByName(String login);
+    ClientEntity getById(int id);
+    ClientEntity editClient(ClientEntity client);
+    List<ClientEntity> getAll();
+    ClientEntity getClientByName(String login);
 }

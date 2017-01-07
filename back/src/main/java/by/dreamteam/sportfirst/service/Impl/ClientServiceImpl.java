@@ -1,7 +1,7 @@
 package by.dreamteam.sportfirst.service.Impl;
 
 
-import by.dreamteam.sportfirst.entity.ClientsEntity;
+import by.dreamteam.sportfirst.entity.ClientEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,7 +19,7 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     @Transactional()
-    public ClientsEntity addClient(ClientsEntity client) {
+    public ClientEntity addClient(ClientEntity client) {
         return clientRepository.saveAndFlush(client);
     }
 
@@ -29,23 +29,23 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public ClientsEntity getById(int id) {
+    public ClientEntity getById(int id) {
         return clientRepository.findOne(id);
     }
 
     @Override
-    public ClientsEntity editClient(ClientsEntity client) {
+    public ClientEntity editClient(ClientEntity client) {
         return clientRepository.saveAndFlush(client);
     }
 
     @Override
-    public List<ClientsEntity> getAll() {
+    public List<ClientEntity> getAll() {
         return clientRepository.findAll();
     }
 
     @Override
-    public ClientsEntity getClientByName(String login) {
-        ClientsEntity client = new ClientsEntity();
+    public ClientEntity getClientByName(String login) {
+        ClientEntity client = new ClientEntity();
         client.setLogin("user");
         client.setPassword("user");
         return client;

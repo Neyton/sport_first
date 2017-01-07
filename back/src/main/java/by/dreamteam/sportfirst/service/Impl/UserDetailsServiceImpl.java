@@ -12,7 +12,7 @@ public class UserDetailsServiceImpl  {
 //    @Override
 //    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
 //
-//        ClientsEntity client = clientService.getClientByName("asd");
+//        ClientEntity client = clientService.getClientByName("asd");
 //        Set<GrantedAuthority> roles = new HashSet<>();
 //        roles.add(new SimpleGrantedAuthority("ROLE_USER"));
 //        UserDetails userDetails = new org.springframework.security.core.userdetails.User(client.getLogin(), client.getPassword(), roles);

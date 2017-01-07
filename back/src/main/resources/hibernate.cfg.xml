@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/sports_betting</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <mapping class="by.dreamteam.sportfirst.entity.ClientEntity"/>
+      <mapping class="by.dreamteam.sportfirst.entity.ClubEntity"/>
+      <mapping class="by.dreamteam.sportfirst.entity.EventEntity"/>
+      <mapping class="by.dreamteam.sportfirst.entity.RateEventEntity"/>
+      <mapping class="by.dreamteam.sportfirst.entity.RoleEntity"/>
+      <mapping class="by.dreamteam.sportfirst.entity.TournamentEntity"/>
+      <mapping class="by.dreamteam.sportfirst.entity.TypeRateEntity"/>
+      <mapping class="by.dreamteam.sportfirst.entity.UserRolesEntity"/>
+      <mapping class="by.dreamteam.sportfirst.entity.ClubTournamentEntity"/>
+      <mapping class="by.dreamteam.sportfirst.entity.EventClubEntity"/>
+    <mapping class="by.dreamteam.sportfirst.entity.BetEntity"/>
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

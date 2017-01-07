@@ -1,9 +1,9 @@
 package by.dreamteam.sportfirst.service.Impl;
 
+import by.dreamteam.sportfirst.entity.TypeRateEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import by.dreamteam.sportfirst.entity.TypeRateEntity;
 import by.dreamteam.sportfirst.repository.TypeRateRepository;
 import by.dreamteam.sportfirst.service.TypeRateService;
 
