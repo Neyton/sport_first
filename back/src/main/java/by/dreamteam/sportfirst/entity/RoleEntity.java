@@ -9,12 +9,10 @@ import java.util.Collection;
 public class RoleEntity {
     private Integer id;
     private String name;
-    private Collection<UserRolesEntity> userRolesById;
 
-    public RoleEntity(Integer id, String name, Collection<UserRolesEntity> userRolesById) {
+    public RoleEntity(Integer id, String name) {
         this.id = id;
         this.name = name;
-        this.userRolesById = userRolesById;
     }
 
     public RoleEntity() {
@@ -58,14 +56,5 @@ public class RoleEntity {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
-    }
-
-    @OneToMany(mappedBy = "roleByRoleId")
-    public Collection<UserRolesEntity> getUserRolesById() {
-        return userRolesById;
-    }
-
-    public void setUserRolesById(Collection<UserRolesEntity> userRolesById) {
-        this.userRolesById = userRolesById;
     }
 }

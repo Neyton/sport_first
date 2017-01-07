@@ -3,22 +3,20 @@ package by.dreamteam.sportfirst.entity;
 import javax.persistence.*;
 import java.util.Collection;
 
-/**
- * Created by Neyton on 07.01.2017.
- */
+
 @Entity
 @Table(name = "club", schema = "sports_betting")
 public class ClubEntity {
     private Integer idClub;
     private String name;
-    private Collection<ClubTournamentEntity> clubTournamentsByIdClub;
-    private Collection<EventClubEntity> eventClubsByIdClub;
+    private Collection<ClubTournamentEntity> clubTournaments;
+    private Collection<EventClubEntity> eventClubs;
 
-    public ClubEntity(Integer idClub, String name, Collection<ClubTournamentEntity> clubTournamentsByIdClub, Collection<EventClubEntity> eventClubsByIdClub) {
+    public ClubEntity(Integer idClub, String name, Collection<ClubTournamentEntity> clubTournaments, Collection<EventClubEntity> eventClubs) {
         this.idClub = idClub;
         this.name = name;
-        this.clubTournamentsByIdClub = clubTournamentsByIdClub;
-        this.eventClubsByIdClub = eventClubsByIdClub;
+        this.clubTournaments = clubTournaments;
+        this.eventClubs = eventClubs;
     }
 
     public ClubEntity() {
@@ -65,20 +63,20 @@ public class ClubEntity {
     }
 
     @OneToMany(mappedBy = "clubByIdClub")
-    public Collection<ClubTournamentEntity> getClubTournamentsByIdClub() {
-        return clubTournamentsByIdClub;
+    public Collection<ClubTournamentEntity> getClubTournaments() {
+        return clubTournaments;
     }
 
-    public void setClubTournamentsByIdClub(Collection<ClubTournamentEntity> clubTournamentsByIdClub) {
-        this.clubTournamentsByIdClub = clubTournamentsByIdClub;
+    public void setClubTournaments(Collection<ClubTournamentEntity> clubTournamentsByIdClub) {
+        this.clubTournaments = clubTournamentsByIdClub;
     }
 
     @OneToMany(mappedBy = "clubByIdClub")
-    public Collection<EventClubEntity> getEventClubsByIdClub() {
-        return eventClubsByIdClub;
+    public Collection<EventClubEntity> getEventClubs() {
+        return eventClubs;
     }
 
-    public void setEventClubsByIdClub(Collection<EventClubEntity> eventClubsByIdClub) {
-        this.eventClubsByIdClub = eventClubsByIdClub;
+    public void setEventClubs(Collection<EventClubEntity> eventClubs) {
+        this.eventClubs = eventClubs;
     }
 }

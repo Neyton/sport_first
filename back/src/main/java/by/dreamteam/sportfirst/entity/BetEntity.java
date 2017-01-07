@@ -6,15 +6,15 @@ import javax.persistence.*;
 @Entity
 @Table(name = "bet", schema = "sports_betting")
 public class BetEntity {
-    private Integer idBet;
+    private Integer id;
     private String winLoss;
     private Integer idClient;
     private Integer idEvent;
     private ClientEntity clientByIdClient;
     private EventEntity eventByIdEvent;
 
-    public BetEntity(Integer idBet, String winLoss, Integer idClient, Integer idEvent, ClientEntity clientByIdClient, EventEntity eventByIdEvent) {
-        this.idBet = idBet;
+    public BetEntity(Integer id, String winLoss, Integer idClient, Integer idEvent, ClientEntity clientByIdClient, EventEntity eventByIdEvent) {
+        this.id = id;
         this.winLoss = winLoss;
         this.idClient = idClient;
         this.idEvent = idEvent;
@@ -26,13 +26,13 @@ public class BetEntity {
     }
 
     @Id
-    @Column(name = "id_bet", nullable = false)
-    public Integer getIdBet() {
-        return idBet;
+    @Column(name = "id", nullable = false)
+    public Integer getId() {
+        return id;
     }
 
-    public void setIdBet(Integer idBet) {
-        this.idBet = idBet;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     @Basic
@@ -72,7 +72,7 @@ public class BetEntity {
 
         BetEntity betEntity = (BetEntity) o;
 
-        if (idBet != null ? !idBet.equals(betEntity.idBet) : betEntity.idBet != null) return false;
+        if (id != null ? !id.equals(betEntity.id) : betEntity.id != null) return false;
         if (winLoss != null ? !winLoss.equals(betEntity.winLoss) : betEntity.winLoss != null) return false;
         if (idClient != null ? !idClient.equals(betEntity.idClient) : betEntity.idClient != null) return false;
         if (idEvent != null ? !idEvent.equals(betEntity.idEvent) : betEntity.idEvent != null) return false;
@@ -82,7 +82,7 @@ public class BetEntity {
 
     @Override
     public int hashCode() {
-        int result = idBet != null ? idBet.hashCode() : 0;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (winLoss != null ? winLoss.hashCode() : 0);
         result = 31 * result + (idClient != null ? idClient.hashCode() : 0);
         result = 31 * result + (idEvent != null ? idEvent.hashCode() : 0);
