@@ -4,9 +4,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Collection;
 
-/**
- * Created by Neyton on 07.01.2017.
- */
+
 @Entity
 @Table(name = "event", schema = "sports_betting")
 public class EventEntity {
@@ -19,6 +17,21 @@ public class EventEntity {
     private Collection<RateEventEntity> rateEventsByIdEvent;
     private Collection<EventClubEntity> eventClubsByIdEvent;
     private Collection<BetEntity> betsByIdEvent;
+
+    public EventEntity(Integer idEvent, Timestamp date, String name, String result, Integer idTournament, TournamentEntity tournamentByIdTournament, Collection<RateEventEntity> rateEventsByIdEvent, Collection<EventClubEntity> eventClubsByIdEvent, Collection<BetEntity> betsByIdEvent) {
+        this.idEvent = idEvent;
+        this.date = date;
+        this.name = name;
+        this.result = result;
+        this.idTournament = idTournament;
+        this.tournamentByIdTournament = tournamentByIdTournament;
+        this.rateEventsByIdEvent = rateEventsByIdEvent;
+        this.eventClubsByIdEvent = eventClubsByIdEvent;
+        this.betsByIdEvent = betsByIdEvent;
+    }
+
+    public EventEntity() {
+    }
 
     @Id
     @Column(name = "id_event", nullable = false)

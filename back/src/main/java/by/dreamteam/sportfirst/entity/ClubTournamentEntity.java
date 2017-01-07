@@ -2,9 +2,7 @@ package by.dreamteam.sportfirst.entity;
 
 import javax.persistence.*;
 
-/**
- * Created by Neyton on 07.01.2017.
- */
+
 @Entity
 @Table(name = "club_tournament", schema = "sports_betting")
 public class ClubTournamentEntity {
@@ -12,6 +10,17 @@ public class ClubTournamentEntity {
     private Integer idTournament;
     private ClubEntity clubByIdClub;
     private TournamentEntity tournamentByIdTournament;
+
+    public ClubTournamentEntity(Integer idClub, Integer idTournament, ClubEntity clubByIdClub, TournamentEntity tournamentByIdTournament, String id) {
+        this.idClub = idClub;
+        this.idTournament = idTournament;
+        this.clubByIdClub = clubByIdClub;
+        this.tournamentByIdTournament = tournamentByIdTournament;
+        this.id = id;
+    }
+
+    public ClubTournamentEntity() {
+    }
 
     @Basic
     @Column(name = "id_club", nullable = true)

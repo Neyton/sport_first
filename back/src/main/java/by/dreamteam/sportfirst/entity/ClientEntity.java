@@ -3,9 +3,7 @@ package by.dreamteam.sportfirst.entity;
 import javax.persistence.*;
 import java.util.Collection;
 
-/**
- * Created by Neyton on 07.01.2017.
- */
+
 @Entity
 @Table(name = "client", schema = "sports_betting")
 public class ClientEntity {
@@ -16,6 +14,19 @@ public class ClientEntity {
     private String password;
     private Collection<UserRolesEntity> userRolesById;
     private Collection<BetEntity> betsById;
+
+    public ClientEntity(Integer id, String email, String login, Integer money, String password, Collection<UserRolesEntity> userRolesById, Collection<BetEntity> betsById) {
+        this.id = id;
+        this.email = email;
+        this.login = login;
+        this.money = money;
+        this.password = password;
+        this.userRolesById = userRolesById;
+        this.betsById = betsById;
+    }
+
+    public ClientEntity() {
+    }
 
     @Id
     @Column(name = "id", nullable = false)

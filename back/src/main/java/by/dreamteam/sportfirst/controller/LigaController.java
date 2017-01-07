@@ -1,8 +1,10 @@
 package by.dreamteam.sportfirst.controller;
 
 
+import by.dreamteam.sportfirst.entity.ClubEntity;
 import by.dreamteam.sportfirst.entity.TournamentEntity;
 import by.dreamteam.sportfirst.service.LigaService;
+import by.dreamteam.sportfirst.service.TournamentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,11 +20,21 @@ public class LigaController {
     @Autowired
     public LigaService ligaService;
 
+    @Autowired
+    public TournamentService tournamentService;
+
     @RequestMapping("/top5")
     public List<TournamentEntity> top5(@RequestParam(value = "name", required = false, defaultValue = "APL") String name) {
         List<TournamentEntity> ligas = new ArrayList<>();
         ligas = ligaService.getAll();
         return ligas;
+    }
+
+    @RequestMapping("/tournament")
+    public TournamentEntity tournament(@RequestParam(value = "name", required = false, defaultValue = "APL") String name){
+        List<ClubEntity> clubs = new ArrayList<>();
+        TournamentEntity tournamentEntity = tournamentService.getByName(name);
+        return tournamentEntity;
     }
 
 }

@@ -14,6 +14,16 @@ public class ClubEntity {
     private Collection<ClubTournamentEntity> clubTournamentsByIdClub;
     private Collection<EventClubEntity> eventClubsByIdClub;
 
+    public ClubEntity(Integer idClub, String name, Collection<ClubTournamentEntity> clubTournamentsByIdClub, Collection<EventClubEntity> eventClubsByIdClub) {
+        this.idClub = idClub;
+        this.name = name;
+        this.clubTournamentsByIdClub = clubTournamentsByIdClub;
+        this.eventClubsByIdClub = eventClubsByIdClub;
+    }
+
+    public ClubEntity() {
+    }
+
     @Id
     @Column(name = "id_club", nullable = false)
     public Integer getIdClub() {

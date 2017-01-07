@@ -2,9 +2,7 @@ package by.dreamteam.sportfirst.entity;
 
 import javax.persistence.*;
 
-/**
- * Created by Neyton on 07.01.2017.
- */
+
 @Entity
 @Table(name = "rate_event", schema = "sports_betting")
 public class RateEventEntity {
@@ -14,6 +12,18 @@ public class RateEventEntity {
     private Integer typeId;
     private EventEntity eventByEventId;
     private TypeRateEntity typeRateByTypeId;
+
+    public RateEventEntity(Integer id, Double kf, Integer eventId, Integer typeId, EventEntity eventByEventId, TypeRateEntity typeRateByTypeId) {
+        this.id = id;
+        this.kf = kf;
+        this.eventId = eventId;
+        this.typeId = typeId;
+        this.eventByEventId = eventByEventId;
+        this.typeRateByTypeId = typeRateByTypeId;
+    }
+
+    public RateEventEntity() {
+    }
 
     @Id
     @Column(name = "id", nullable = false)

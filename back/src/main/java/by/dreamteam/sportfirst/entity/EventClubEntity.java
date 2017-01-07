@@ -2,17 +2,28 @@ package by.dreamteam.sportfirst.entity;
 
 import javax.persistence.*;
 
-/**
- * Created by Neyton on 07.01.2017.
- */
+
 @Entity
 @Table(name = "event_club", schema = "sports_betting")
 public class EventClubEntity {
 
     private Integer idEvent;
     private Integer idClub;
+    private String status;
     private EventEntity eventByIdEvent;
     private ClubEntity clubByIdClub;
+
+    public EventClubEntity(Integer idEvent, Integer idClub, String status, EventEntity eventByIdEvent, ClubEntity clubByIdClub, String id) {
+        this.idEvent = idEvent;
+        this.idClub = idClub;
+        this.status = status;
+        this.eventByIdEvent = eventByIdEvent;
+        this.clubByIdClub = clubByIdClub;
+        this.id = id;
+    }
+
+    public EventClubEntity() {
+    }
 
     @Basic
     @Column(name = "id_event", nullable = true)
@@ -32,6 +43,16 @@ public class EventClubEntity {
 
     public void setIdClub(Integer idClub) {
         this.idClub = idClub;
+    }
+
+    @Basic
+    @Column(name = "status", nullable = true)
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     @Override

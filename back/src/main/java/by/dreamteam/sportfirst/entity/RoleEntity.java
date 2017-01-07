@@ -11,6 +11,15 @@ public class RoleEntity {
     private String name;
     private Collection<UserRolesEntity> userRolesById;
 
+    public RoleEntity(Integer id, String name, Collection<UserRolesEntity> userRolesById) {
+        this.id = id;
+        this.name = name;
+        this.userRolesById = userRolesById;
+    }
+
+    public RoleEntity() {
+    }
+
     @Id
     @Column(name = "id", nullable = false)
     public Integer getId() {

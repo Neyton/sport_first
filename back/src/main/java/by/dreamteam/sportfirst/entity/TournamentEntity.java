@@ -3,9 +3,7 @@ package by.dreamteam.sportfirst.entity;
 import javax.persistence.*;
 import java.util.Collection;
 
-/**
- * Created by Neyton on 07.01.2017.
- */
+
 @Entity
 @Table(name = "tournament", schema = "sports_betting")
 public class TournamentEntity {
@@ -13,6 +11,16 @@ public class TournamentEntity {
     private String name;
     private Collection<EventEntity> eventsByIdTournament;
     private Collection<ClubTournamentEntity> clubTournamentsByIdTournament;
+
+    public TournamentEntity(Integer idTournament, String name, Collection<EventEntity> eventsByIdTournament, Collection<ClubTournamentEntity> clubTournamentsByIdTournament) {
+        this.idTournament = idTournament;
+        this.name = name;
+        this.eventsByIdTournament = eventsByIdTournament;
+        this.clubTournamentsByIdTournament = clubTournamentsByIdTournament;
+    }
+
+    public TournamentEntity() {
+    }
 
     @Id
     @Column(name = "id_tournament", nullable = false)

@@ -13,6 +13,18 @@ public class BetEntity {
     private ClientEntity clientByIdClient;
     private EventEntity eventByIdEvent;
 
+    public BetEntity(Integer idBet, String winLoss, Integer idClient, Integer idEvent, ClientEntity clientByIdClient, EventEntity eventByIdEvent) {
+        this.idBet = idBet;
+        this.winLoss = winLoss;
+        this.idClient = idClient;
+        this.idEvent = idEvent;
+        this.clientByIdClient = clientByIdClient;
+        this.eventByIdEvent = eventByIdEvent;
+    }
+
+    public BetEntity() {
+    }
+
     @Id
     @Column(name = "id_bet", nullable = false)
     public Integer getIdBet() {

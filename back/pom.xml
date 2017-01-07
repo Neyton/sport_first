@@ -59,12 +59,7 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-security</artifactId>-->
-			<!--<version>1.4.2.RELEASE</version>-->
-		<!--</dependency>-->
+
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
@@ -80,6 +75,7 @@
 			<artifactId>json-path</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 
 
 	</dependencies>

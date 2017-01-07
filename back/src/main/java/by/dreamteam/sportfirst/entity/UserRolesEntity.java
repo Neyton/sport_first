@@ -2,17 +2,24 @@ package by.dreamteam.sportfirst.entity;
 
 import javax.persistence.*;
 
-/**
- * Created by Neyton on 07.01.2017.
- */
+
 @Entity
 @Table(name = "user_roles", schema = "sports_betting")
-@IdClass(UserRolesEntityPK.class)
 public class UserRolesEntity {
     private Integer userId;
     private Integer roleId;
     private ClientEntity clientByUserId;
     private RoleEntity roleByRoleId;
+
+    public UserRolesEntity(Integer userId, Integer roleId, ClientEntity clientByUserId, RoleEntity roleByRoleId) {
+        this.userId = userId;
+        this.roleId = roleId;
+        this.clientByUserId = clientByUserId;
+        this.roleByRoleId = roleByRoleId;
+    }
+
+    public UserRolesEntity() {
+    }
 
     @Id
     @Column(name = "user_id", nullable = false)

@@ -3,15 +3,22 @@ package by.dreamteam.sportfirst.entity;
 import javax.persistence.*;
 import java.util.Collection;
 
-/**
- * Created by Neyton on 07.01.2017.
- */
+
 @Entity
 @Table(name = "type_rate", schema = "sports_betting")
 public class TypeRateEntity {
     private Integer id;
     private String name;
     private Collection<RateEventEntity> rateEventsById;
+
+    public TypeRateEntity(Integer id, String name, Collection<RateEventEntity> rateEventsById) {
+        this.id = id;
+        this.name = name;
+        this.rateEventsById = rateEventsById;
+    }
+
+    public TypeRateEntity() {
+    }
 
     @Id
     @Column(name = "id", nullable = false)
