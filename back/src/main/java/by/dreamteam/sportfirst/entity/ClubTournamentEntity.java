@@ -1,45 +1,63 @@
 package by.dreamteam.sportfirst.entity;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 
 @Entity
-@Table(name = "club_tournament", schema = "sports_betting")
+@Table(name = "club_tournament", schema = "sports_betting", uniqueConstraints =
+@UniqueConstraint(name = "club_tournament_unique", columnNames = {"id_club", "id_tournament"}))
 public class ClubTournamentEntity {
-    private Integer idClub;
-    private Integer idTournament;
-    private ClubEntity clubByIdClub;
-    private TournamentEntity tournamentByIdTournament;
+    private Long id;
+    private ClubEntity club;
+    private TournamentEntity tournament;
+    private boolean involved;
 
-    public ClubTournamentEntity(Integer idClub, Integer idTournament, ClubEntity clubByIdClub, TournamentEntity tournamentByIdTournament, String id) {
-        this.idClub = idClub;
-        this.idTournament = idTournament;
-        this.clubByIdClub = clubByIdClub;
-        this.tournamentByIdTournament = tournamentByIdTournament;
-        this.id = id;
+    @Id
+    @Basic
+    @Column(name = "id", nullable = false)
+    public Long getId() {
+        return id;
     }
 
-    public ClubTournamentEntity() {
+    public void setId(Long idClub) {
+        this.id = idClub;
     }
 
     @Basic
-    @Column(name = "id_club", nullable = true)
-    public Integer getIdClub() {
-        return idClub;
+    @Column(name = "involved", columnDefinition = "boolean default true", nullable = false)
+    public boolean isInvolved() {
+        return involved;
     }
 
-    public void setIdClub(Integer idClub) {
-        this.idClub = idClub;
+    public void setInvolved(boolean available) {
+        this.involved = available;
     }
 
-    @Basic
-    @Column(name = "id_tournament", nullable = true)
-    public Integer getIdTournament() {
-        return idTournament;
+    @ManyToOne
+    @JoinColumn(name = "id_club", referencedColumnName = "id_club")
+    public ClubEntity getClub() {
+        return club;
     }
 
-    public void setIdTournament(Integer idTournament) {
-        this.idTournament = idTournament;
+    public void setClub(ClubEntity club) {
+        this.club = club;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "id_tournament", referencedColumnName = "id_tournament")
+    public TournamentEntity getTournament() {
+        return tournament;
+    }
+
+    public void setTournament(TournamentEntity tournament) {
+        this.tournament = tournament;
     }
 
     @Override
@@ -49,47 +67,18 @@ public class ClubTournamentEntity {
 
         ClubTournamentEntity that = (ClubTournamentEntity) o;
 
-        if (idClub != null ? !idClub.equals(that.idClub) : that.idClub != null) return false;
-        if (idTournament != null ? !idTournament.equals(that.idTournament) : that.idTournament != null) return false;
-
-        return true;
+        if (involved != that.involved) return false;
+        if (!id.equals(that.id)) return false;
+        if (club != null ? !club.equals(that.club) : that.club != null) return false;
+        return tournament != null ? tournament.equals(that.tournament) : that.tournament == null;
     }
 
     @Override
     public int hashCode() {
-        int result = idClub != null ? idClub.hashCode() : 0;
-        result = 31 * result + (idTournament != null ? idTournament.hashCode() : 0);
+        int result = id.hashCode();
+        result = 31 * result + (club != null ? club.hashCode() : 0);
+        result = 31 * result + (tournament != null ? tournament.hashCode() : 0);
+        result = 31 * result + (involved ? 1 : 0);
         return result;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "id_club", referencedColumnName = "id_club")
-    public ClubEntity getClubByIdClub() {
-        return clubByIdClub;
-    }
-
-    public void setClubByIdClub(ClubEntity clubByIdClub) {
-        this.clubByIdClub = clubByIdClub;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "id_tournament", referencedColumnName = "id_tournament")
-    public TournamentEntity getTournamentByIdTournament() {
-        return tournamentByIdTournament;
-    }
-
-    public void setTournamentByIdTournament(TournamentEntity tournamentByIdTournament) {
-        this.tournamentByIdTournament = tournamentByIdTournament;
-    }
-
-    private String id;
-
-    @Id
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 }

@@ -10,15 +10,15 @@ public class BetEntity {
     private String winLoss;
     private Integer idClient;
     private Integer idEvent;
-    private ClientEntity clientByIdClient;
+    private ClientEntity client;
     private EventEntity eventByIdEvent;
 
-    public BetEntity(Integer id, String winLoss, Integer idClient, Integer idEvent, ClientEntity clientByIdClient, EventEntity eventByIdEvent) {
+    public BetEntity(Integer id, String winLoss, Integer idClient, Integer idEvent, ClientEntity client, EventEntity eventByIdEvent) {
         this.id = id;
         this.winLoss = winLoss;
         this.idClient = idClient;
         this.idEvent = idEvent;
-        this.clientByIdClient = clientByIdClient;
+        this.client = client;
         this.eventByIdEvent = eventByIdEvent;
     }
 
@@ -91,12 +91,12 @@ public class BetEntity {
 
     @ManyToOne
     @JoinColumn(name = "id_client", referencedColumnName = "id")
-    public ClientEntity getClientByIdClient() {
-        return clientByIdClient;
+    public ClientEntity getClient() {
+        return client;
     }
 
-    public void setClientByIdClient(ClientEntity clientByIdClient) {
-        this.clientByIdClient = clientByIdClient;
+    public void setClient(ClientEntity clientByIdClient) {
+        this.client = clientByIdClient;
     }
 
     @ManyToOne

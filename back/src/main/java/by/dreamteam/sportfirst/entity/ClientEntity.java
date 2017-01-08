@@ -12,15 +12,15 @@ public class ClientEntity {
     private String login;
     private Integer money;
     private String password;
-    private Collection<BetEntity> betsById;
+    private Collection<BetEntity> bets;
 
-    public ClientEntity(Integer id, String email, String login, Integer money, String password, Collection<BetEntity> betsById) {
+    public ClientEntity(Integer id, String email, String login, Integer money, String password, Collection<BetEntity> bets) {
         this.id = id;
         this.email = email;
         this.login = login;
         this.money = money;
         this.password = password;
-        this.betsById = betsById;
+        this.bets = bets;
     }
 
     public ClientEntity() {
@@ -102,12 +102,12 @@ public class ClientEntity {
         return result;
     }
 
-    @OneToMany(mappedBy = "clientByIdClient")
-    public Collection<BetEntity> getBetsById() {
-        return betsById;
+    @OneToMany(mappedBy = "client")
+    public Collection<BetEntity> getBets() {
+        return bets;
     }
 
-    public void setBetsById(Collection<BetEntity> betsById) {
-        this.betsById = betsById;
+    public void setBets(Collection<BetEntity> betsById) {
+        this.bets = betsById;
     }
 }
